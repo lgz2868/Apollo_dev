@@ -39,7 +39,9 @@ const std::vector<std::pair<double, double>>& SpeedLimit::speed_limit_points()
   return speed_limit_points_;
 }
 
-double SpeedLimit::GetSpeedLimitByS(const double s) const {
+double SpeedLimit::GetSpeedLimitByS(const double s) const 
+{
+
   CHECK_GE(speed_limit_points_.size(), 2U);
   DCHECK_GE(s, speed_limit_points_.front().first);
 
